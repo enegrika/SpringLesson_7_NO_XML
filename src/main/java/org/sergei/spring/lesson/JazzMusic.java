@@ -8,8 +8,8 @@ import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-@Scope("prototype")
+//@Component
+//@Scope("prototype")
 public class JazzMusic implements Music {
 
     @Override
