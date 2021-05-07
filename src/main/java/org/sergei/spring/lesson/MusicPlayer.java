@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-//@Component
+@Component
 @Scope("singleton")
 public class MusicPlayer {
 
@@ -16,6 +16,7 @@ public class MusicPlayer {
     private Music music2;
 
     // value name case sensitive!
+
     @Value("${musicPlayer.name}")
     private String name;
     @Value("${musicPlayer.volume}")
