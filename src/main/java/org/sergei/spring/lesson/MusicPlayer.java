@@ -6,12 +6,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 @Component
 @Scope("singleton")
 public class MusicPlayer {
 
+    private List<MusicGenre> genreList;
     private Music music1;
     private Music music2;
 
@@ -28,6 +31,12 @@ public class MusicPlayer {
                        @Qualifier("jazzMusic") Music music2) {
         this.music1 = music1;
         this.music2 = music2;
+    }
+
+    public MusicPlayer(List<MusicGenre> genreList) {
+        genreList.add(MusicGenre.JAZZ);
+        genreList.add(MusicGenre.CLASSICAL);
+        this.genreList = genreList;
     }
 
     public void playMusic(MusicGenre musicGenre) {

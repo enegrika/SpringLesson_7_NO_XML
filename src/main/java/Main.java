@@ -5,6 +5,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 
+//        ClassPathXmlApplicationContext using to CREATE XML CONTEXT CONFIG
+
+        // AnnotationConfigApplicationCongtext  to use ONLY JAVA for CONTEXT CONFIG
+        //
         // получение контейнера(контекста) Спринга, в котором он хранит все объекты-бины
 // класс для получения КОНТЕКСТА с помощью АННОТАЦИИ CONFIGURATION !!!!!!
 
@@ -34,6 +38,7 @@ public class Main {
         } else {
             System.out.println("beans are not equal - musicPlayer scope is PROTOTYPE");
         }
+
 
 
         context.close();
