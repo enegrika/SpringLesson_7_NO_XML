@@ -1,41 +1,35 @@
 package org.sergei.spring.lesson;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class JazzMusic implements Music {
+public class PopMusic implements Music {
 
     @Override
     public String getSong() {
-        return "JAZZ :  Dizzie Gillespie - Take five";
+        return "POP : A-HA - Lifelines";
     }
 
     @Override
     public List getSongList() {
         List<String> list = new ArrayList<>();
-        list.add("Take five");
-        list.add("Watermelon Man");
-        list.add("Unforgettable");
+        list.add("A-HA Lifelines");
+        list.add("Duran Duran - Ordinary World");
+        list.add("Depeche Mode - Behind the wheel");
         return list;
     }
 
     @Override
     @PostConstruct
     public void doInit() {
-        System.out.println("jazz music bean initialized " + this);
-
+        System.out.println("pop music bean initialized " + this);
     }
 
     @Override
     @PreDestroy
     public void doDestroy() {
-        System.out.println("jazz music bean destroyed " + this);
-
+        System.out.println("pop music bean destroyed " + this);
     }
 }
