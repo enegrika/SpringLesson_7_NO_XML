@@ -18,22 +18,6 @@ public class MusicPlayer {
     @Value("${musicPlayer.volume}")
     private int volume;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
     private List<Music> musicList;
 
     public MusicPlayer(List<Music> musicList) {

@@ -1,6 +1,7 @@
 package config;
 
 import org.sergei.spring.lesson.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
 import java.util.Arrays;
