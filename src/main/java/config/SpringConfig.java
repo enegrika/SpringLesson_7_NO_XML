@@ -36,7 +36,7 @@ public class SpringConfig {
 
     @Bean
     @Scope("singleton")
-    // CREATING BEAN with a LIST of the MUSIC
+    // CREATING BEAN with a LIST of the MUSIC genres
     public List<Music> musicList(){
         return Arrays.asList(classicalMusic(),jazzMusic(),popMusic());
 
